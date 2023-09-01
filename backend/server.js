@@ -15,13 +15,13 @@ app.use(express.urlencoded({extended: false}))
 //user resource
 //comments resources
 //....
-//connectDB();
+connectDB();
 
 app.use('/api/goals', require('./routes/goalRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 
-
+//no need for project
+//app.use(errorhandler)
 app.listen(port, () => {
-
-
 console.log(`Server started on port ${port}`)
 })
